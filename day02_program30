@@ -1,19 +1,27 @@
-Calculating Gain Percentage
-
+Binary to Decimal
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
 #include <stdlib.h>
 
 int main() {
-    float cost_price, repair_cost, selling_price, total_cost, gain, gain_percent;
-    scanf("%f", &cost_price);
-    scanf("%f", &repair_cost);
-    scanf("%f", &selling_price);
-    total_cost = cost_price + repair_cost;
-    gain = selling_price - total_cost;
-    gain_percent = (gain / total_cost) * 100;
-    printf("%.2f\n", gain_percent);
+    char binary[65]; 
+    scanf("%s", binary);
 
+    int length = strlen(binary);
+    int decimal = 0;
+
+    for (int i = 0; i < length; i++) {
+        if (binary[i] == '1') {
+            decimal = decimal * 2 + 1;
+        } else if (binary[i] == '0') {
+            decimal = decimal * 2;
+        } else {
+            printf("Invalid Input\n");
+            return 1;
+        }
+    }
+
+    printf("%d\n", decimal);
     return 0;
 }
