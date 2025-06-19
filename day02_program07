@@ -1,0 +1,27 @@
+BMI Calculation
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main() {
+    float w ,h;
+    scanf("%f%f",&w,&h);
+    h = h/100;
+    float wh=w/(h*h);
+        
+    if(wh<18.5)
+        printf("You are underweight. Have an apple daily.");
+    else if(wh>=18.5 && wh<=24.9)
+        printf("You are normal. Go walking daily and maintain it.");
+    else if(wh>=25 && wh<=30)
+        printf("You are overweight. Go to Gym daily.");
+    else
+        printf("You are obese. You need to see a doctor.");
+    
+    return 0;
+}
