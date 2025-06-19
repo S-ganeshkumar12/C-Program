@@ -1,0 +1,23 @@
+Math Functions
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main() {
+    float floatVal;
+    int squareVal,baseVal,powerVal;
+    scanf ("%f",&floatVal);
+    scanf("%d",&squareVal);
+     scanf("%d",&baseVal);
+     scanf("%d",&powerVal);
+    printf("%d\n",(int)floor(floatVal));
+    printf("%d\n",(int)ceil(floatVal));
+    printf("%d\n",(int)sqrt(squareVal));
+    printf("%d\n",(int)pow(baseVal,powerVal));
+    return 0;
+}
