@@ -1,0 +1,30 @@
+PATTERN-04
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n, i, j, num = 1;
+    scanf("%d", &n);
+
+    int matrix[n][n];
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < n; j++) {
+            matrix[i][j] = num++;
+        }
+    }
+
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < n; j++) {
+            if (i == 0 || i == n - 1 || j == 0 || j == n - 1)
+                printf("%-4d\t", matrix[i][j]);  
+            else
+                printf("    "); 
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
