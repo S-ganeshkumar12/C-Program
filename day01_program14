@@ -1,0 +1,20 @@
+Cricket stadium
+
+  #include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main() {
+    int l,b;
+    int area,peri;
+    scanf("%d%d",&l,&b);
+    area = l*b;
+    peri = (l+b)*2;
+    printf("%d\n",peri);
+    printf("%d",area);
+    return 0;
+}
