@@ -1,4 +1,4 @@
-P2 - Green Lights
+Calculating Gain PercentageAdd commentMore actions
 
 #include <stdio.h>
 #include <string.h>
@@ -6,18 +6,14 @@ P2 - Green Lights
 #include <stdlib.h>
 
 int main() {
-    float speed, distance, time;
-    scanf("%f", &speed);    
-    scanf("%f", &distance);  
-    scanf("%f", &time);    
-    float speed_mps = speed / 3600.0;
-    float time_needed = distance / speed_mps;
-
-    if (time_needed < time) {
-        printf("Yes\n");
-    } else {
-        printf("No\n");
-    }
+    float cost_price, repair_cost, selling_price, total_cost, gain, gain_percent;
+    scanf("%f", &cost_price);
+    scanf("%f", &repair_cost);
+    scanf("%f", &selling_price);
+    total_cost = cost_price + repair_cost;
+    gain = selling_price - total_cost;
+    gain_percent = (gain / total_cost) * 100;
+    printf("%.2f\n", gain_percent);
 
     return 0;
 }
