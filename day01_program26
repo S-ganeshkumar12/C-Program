@@ -1,0 +1,31 @@
+Shape Calculation-Perimeter
+
+#include <stdio.h>
+
+int main() {
+    int side, length, width;
+    int radius;
+    int base1, side_t, base2;
+    int square_perimeter, rectangle_perimeter, triangle_perimeter;
+    float circle_perimeter;
+    const float PI = 3.1416;
+    scanf("%d", &side);       
+    scanf("%d", &length);     
+    scanf("%d", &width);
+    scanf("%d", &radius); 
+    scanf("%d", &base1);    
+    scanf("%d", &side_t);    
+    scanf("%d", &base2);    
+
+    square_perimeter = 4 * side;
+    rectangle_perimeter = 2 * (length + width);
+    circle_perimeter = 2 * PI * radius;
+    triangle_perimeter = base1 + side_t + base2;
+
+    printf("Perimeter of Square:%d\n", square_perimeter);
+    printf("Perimeter of Rectangle:%d\n", rectangle_perimeter);
+    printf("Perimeter of Circle:%.2f\n", circle_perimeter);
+    printf("Perimeter of Triangle:%d\n", triangle_perimeter);
+
+    return 0;
+}
