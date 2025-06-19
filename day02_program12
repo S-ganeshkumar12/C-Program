@@ -1,0 +1,30 @@
+Gardening
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main() {
+    int a,b,c;
+    scanf("%d%d%d",&a,&b,&c);
+    int i=2;
+    int j=b-1;
+    int tree=0;
+    for(int r=0;r<a;r++){
+    int SecCol=r*b+i;
+        int SecLastCol=r*b+j;
+    if(c==SecLastCol || c == SecLastCol) {
+        tree =1;
+        break;
+    }
+    }
+    if(tree)
+            printf("It is a mango tree\n");
+    else
+        printf("It is not a mango tree");
+    return 0;
+}
