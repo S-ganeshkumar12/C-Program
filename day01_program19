@@ -1,0 +1,19 @@
+FENCING THE GROUND
+
+  #include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int l,b,w;
+    float area,peri;
+    scanf("%d%d",&l,&b);
+    area=l*b;
+    w=area/l;
+    peri=2*(l+w);
+    
+    printf("Required length is %0.2fm\n",peri);
+    printf("Required quantity of carpet is %0.2fsqm",area);    
+    return 0;
+}
