@@ -1,0 +1,18 @@
+Decimal Formatting
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    float a;
+    scanf("%f",&a);
+    printf("%0.5f",a);   
+    printf("\n%0.4f",a);
+    printf("\n%0.3f",a);
+    printf("\n%0.2f",a);
+    printf("\n%0.1f",a);
+    printf("\n%d",(int)a);
+return 0;
+}
