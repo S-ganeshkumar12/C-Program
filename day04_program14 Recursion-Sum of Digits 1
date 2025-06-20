@@ -1,0 +1,24 @@
+Recursion-Sum of Digits 1
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <stdio.h>
+int sumOfDigits(int n) {
+    if (n == 0)
+        return 0;
+    return (n % 10) + sumOfDigits(n / 10);
+}
+int main() {
+    int num;
+    scanf("%d", &num);
+    if (num < 1000 && num >= 0) {
+        int result = sumOfDigits(num);
+        printf("Sum of Digit:%04d\n", result);
+    } else {
+        printf("Enter a Valid Input!!!!!!!\n");
+    }
+
+    return 0;
+}
