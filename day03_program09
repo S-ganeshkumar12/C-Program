@@ -1,0 +1,34 @@
+Numbers Greater Than Target Value
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n, target;
+    scanf("%d", &n);
+    int arr[n];
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    scanf("%d", &target);
+    int sum = 0, count = 0;
+    float average;
+   printf("The Target values are ");
+    for(int i = 0; i < n; i++) {
+        if(arr[i] > target) {
+            printf("%d ", arr[i]);
+            sum += arr[i];
+            count++;
+        }
+    }
+    if(count > 0) {
+        average = (float)sum / count;
+        printf("\nsum of value is %d\n", sum);
+        printf("Average of the value is %.1f\n", average);
+    } else {
+        printf("\nNo elements greater than the target value.\n");
+    }
+    return 0;
+}
