@@ -1,0 +1,34 @@
+Reverse Prefix Of Word
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char word[251], ch;
+    int i, pos = -1;
+    scanf("%250s", word);
+    scanf(" %c", &ch);
+    int len = strlen(word);
+    for (i = 0; i < len; i++) {
+        if (word[i] == ch) {
+            pos = i;
+            break;
+        }
+    }
+    if (pos != -1) {
+        int start = 0, end = pos;
+        while (start < end) {
+            char temp = word[start];
+            word[start] = word[end];
+            word[end] = temp;
+            start++;
+            end--;
+        }
+    }
+    printf("%s\n", word);
+    return 0;
+}
