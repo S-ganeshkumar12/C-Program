@@ -1,0 +1,29 @@
+Delete the vowels
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int isVowel(char ch) {
+    ch = tolower(ch);
+    return (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u');
+}
+
+int main() {
+    char str[1000], result[1000];
+    int i = 0, j = 0;
+    scanf("%[^\n]",str);
+    while (str[i] != '\0') {
+        if (!isVowel(str[i])) {
+            result[j++] = str[i];
+        }
+        i++;
+    }
+    result[j] = '\0'; 
+    printf("%s\n", result);
+    return 0;
+}
