@@ -1,0 +1,36 @@
+Best Leader
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    int arr[n];
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int bestLeaders[n]; 
+    int count = 0;
+
+    int maxScore = arr[n-1];
+    bestLeaders[count++] = maxScore;
+
+    for(int i = n-2; i >= 0; i--) {
+        if(arr[i] > maxScore) {
+            maxScore = arr[i];
+            bestLeaders[count++] = maxScore;
+        }
+    }
+
+    printf("The Best Leaders are ");
+    for(int i = count - 1; i >= 0; i--) {
+        printf("%d ", bestLeaders[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
