@@ -1,0 +1,32 @@
+Same or Not
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main() {
+ int a;
+    scanf("%d",&a);
+    int arr[a],i,k;
+    for(i=0;i<a;i++){
+        scanf("%d",&arr[i]);
+    }
+    int count=0;
+    for(i=0;i<a;i++){
+        k=arr[i];
+        if(k%2==0)
+        count++;
+    }
+    if(count==0)
+        printf("Odd");
+    else if(count==a)
+        printf("Even");
+    else
+        printf("Mixed");
+    
+    return 0;
+}
